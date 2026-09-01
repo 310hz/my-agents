@@ -1,2 +1,2 @@
-ai-link:
-    bash scripts/link.sh
+link *args:
+    bash scripts/link.sh {{args}}
