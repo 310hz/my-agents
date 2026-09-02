@@ -1,6 +1,5 @@
 ---
 name: git-commit
-
 description: Create consistent Git commits by splitting changes into logical units and writing messages with an English prefix and Japanese description. Use when committing changes, proposing or revising commit messages, or deciding how to split changes.
 ---
 
