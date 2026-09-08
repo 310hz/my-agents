@@ -20,7 +20,6 @@
 - Use `rm` freely for files that are clearly safe to delete. If unsure, move them to `<project-root>/.trash/`. Treat `.trash/` as ignored by Git.
 - Do not place temporary files, caches, or intermediate artifacts in locations that are inconvenient for the user to access, such as `/tmp`. Keep them under the project root and avoid committing them accidentally.
 - Run Python through `uv`.
-- Use `just` as the task runner.
 
 ## Git / GitHub
 
@@ -46,9 +45,9 @@ git config --global alias.agent '!git -c user.name="Agent" -c user.email="agent@
 
 ## Project Documentation
 
-For repositories owned by `310hz`, maintain the following files for session handoff. Avoid duplicating information across them.
+For repositories owned by `310hz`, maintain the following files for session handoff and ongoing development. Avoid duplicating information across them.
 
-- `AGENTS.md`: Stable project context, major technologies, implementation rules, and high-level structure. Do not use it for file-level details or progress tracking.
-- `agents/docs/requirements.md`: Confirmed requirements, constraints, and conceptual design. Updated infrequently.
+- `AGENTS.md`: Information that agents should know whenever working in the repository. Update it as needed when project-specific information required for development changes.
+- `agents/docs/requirements.md`: Confirmed requirements and decisions.
 - `agents/docs/plan.md`: High-level implementation plan.
-- `agents/docs/status.md`: Current progress, next steps, blockers, and handoff notes. Update frequently.
+- `agents/docs/status.md`: Current development state and handoff information. Update frequently.
