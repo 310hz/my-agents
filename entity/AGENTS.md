@@ -20,6 +20,7 @@
 - Use `rm` freely for files that are clearly safe to delete. If unsure, move them to `<project-root>/.trash/`. Treat `.trash/` as ignored by Git.
 - Do not place temporary files, caches, or intermediate artifacts in locations that are inconvenient for the user to access, such as `/tmp`. Keep them under the project root and avoid committing them accidentally.
 - Run Python through `uv`.
+- Use `just` as the task runner.
 
 ## Git / GitHub
 
