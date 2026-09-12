@@ -6,8 +6,8 @@
 
 - Communicate with the user in Japanese.
 - Prioritize explicit user instructions.
-- If the user's request is extremely underspecified, such as only "やって" or "どうぞ", refer to the project's `instruction.md`.
-- If `instruction.md` does not exist or still does not clarify the task, ask the user instead of guessing.
+- If the user's request is extremely underspecified, such as only "やって" or "どうぞ", refer to `instructions.md` and `agents/docs/status.md`.
+- If they do not exist or still do not clarify the task, ask the user instead of guessing.
 
 ### Delegating Work to the User
 
@@ -17,32 +17,23 @@
 
 ### CLI
 
-- Use `rm` freely for files that are clearly safe to delete. If unsure, move them to `<project-root>/.trash/`. Treat `.trash/` as ignored by Git.
+- Use `rm` for files that are clearly safe to delete. If unsure, move them to `<project-root>/.trash/`.
 - Do not place temporary files, caches, or intermediate artifacts in locations that are inconvenient for the user to access, such as `/tmp`. Keep them under the project root and avoid committing them accidentally.
 - Run Python through `uv`.
 - Use `just` as the task runner.
 
 ## Git / GitHub
 
-The user's GitHub account is `310hz`.
-
-### Repository Ownership
-
-- Treat repositories whose GitHub remote belongs to `310hz` as user-owned.
-- If ownership is unclear, inspect the remote.
-- For repositories not owned by `310hz`, do not apply the Git workflow or documentation workflow below unless explicitly instructed.
-
-### Commits
-
-The following Git alias is configured for agent-authored commits:
+- Treat repositories whose GitHub remote belongs to `310hz` as user-owned; inspect the remote if ownership is unclear.
+- For other repositories, do not apply the Git or documentation workflow below unless explicitly instructed.
+- Use `git agent commit` for agent-authored commits, configured as:
 
 ```sh
-git config --global alias.agent '!git -c user.name="Agent" -c user.email="agent@local"'
+git config --global alias.agent '!git -c user.name="Agent"'
 ```
 
-- Use `git agent commit` for all agent-authored commits.
 - Do not use plain `git commit`.
-- For repositories owned by `310hz`, unless instructed otherwise, commit and push once a coherent set of changes is complete so the work is preserved on the remote.
+- For user-owned repositories, commit and push after completing a coherent set of changes unless instructed otherwise.
 
 ## Project Documentation
 
