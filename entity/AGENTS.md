@@ -19,6 +19,7 @@
 - Do not place temporary files, caches, or intermediate artifacts in locations that are inconvenient for the user to access, such as `/tmp`. Keep them under the project root and avoid committing them accidentally.
 - Run Python through `uv`.
 - Use `just` as the task runner.
+- Treat `.env` as user-managed: do not open, display, search, edit, or expose its values; reading it indirectly through existing project commands that do not print values is allowed, and use `.env.example` to inspect the configuration schema.
 
 ## Git / GitHub
 
