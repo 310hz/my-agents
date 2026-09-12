@@ -6,7 +6,7 @@
 
 - Communicate with the user in Japanese.
 - Prioritize explicit user instructions.
-- If the user's request is extremely underspecified, such as only "やって" or "どうぞ", refer to `instructions.md` and `agents/docs/status.md`.
+- If the user's request is extremely underspecified, such as only "やって" or "どうぞ", refer to `instructions.md` or `agents/docs/status.md`.
 - If they do not exist or still do not clarify the task, ask the user instead of guessing.
 
 ### Delegating Work to the User
