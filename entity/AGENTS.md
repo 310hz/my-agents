@@ -47,8 +47,8 @@ Documentation is not only for handing work off to the next person. Preserve info
 - `<project-root>/`
   - `AGENTS.md`
     - The first document everyone working on the project should read.
-    - Describe assumptions, rules, and constraints that must be understood before working on any task.
-    - Do not try to cover all project details.
+    - Describe the project's purpose and essential background, along with assumptions, rules, and constraints that must be understood before working on any task.
+    - Include only context that is broadly relevant across the project; do not try to cover all project details.
     - Keep its update frequency low.
   - `agents/`
     - `docs/`
