@@ -1,4 +1,4 @@
-# Global Agent Instructions
+# Global AGENTS.md
 
 ## Responsibilities
 
