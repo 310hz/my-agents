@@ -27,7 +27,7 @@
 - For other repositories, do not apply the Git or documentation workflow below unless explicitly instructed.
 - Use the dedicated `git agent commit` alias for agent-authored commits.
 - Follow the Conventional Commits specification for commit messages.
-- For user-owned repositories, commit and push each coherent set of changes unless instructed otherwise.
+- For user-owned repositories, commit and push after completing a coherent set of changes unless instructed otherwise.
 
 ## Documents
 
