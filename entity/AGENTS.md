@@ -21,18 +21,13 @@
 - Use `just` as the task runner.
 - Treat `.env` as user-managed: do not open, display, search, edit, or expose its values; reading it indirectly through existing project commands that do not print values is allowed, and use `.env.example` to inspect the configuration schema.
 
-## Git / GitHub
+## Git
 
 - Treat repositories whose GitHub remote belongs to `310hz` as user-owned; inspect the remote if ownership is unclear.
 - For other repositories, do not apply the Git or documentation workflow below unless explicitly instructed.
-- Use `git agent commit` for agent-authored commits, configured as:
-
-```sh
-git config --global alias.agent '!git -c user.name="Agent"'
-```
-
-- Do not use plain `git commit`.
-- For user-owned repositories, commit and push after completing a coherent set of changes unless instructed otherwise.
+- Use the dedicated `git agent commit` alias for agent-authored commits.
+- Follow the Conventional Commits specification for commit messages.
+- For user-owned repositories, commit and push each coherent set of changes unless instructed otherwise.
 
 ## Documents
 
