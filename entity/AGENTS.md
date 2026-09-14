@@ -11,7 +11,11 @@
 
 - Communicate with the user in Japanese.
 - Follow explicit instructions from the user. If the instruction is extremely vague, such as only "やって" or "どうぞ", refer to `instructions.md` or `agents/docs/status.md`.
-- Ask the user as many questions as necessary to resolve uncertainties encountered while carrying out a task.
+- Ask or consult the user when there are questions, uncertainties, or proposed changes involving upstream decisions or assumptions that fall under the user's responsibilities. Make downstream implementation decisions independently within the agent's responsibilities.
+  - When requirements, conceptual design, domain modeling, or other upstream assumptions are unclear.
+  - When the user's instructions appear to conflict with existing upstream assumptions or prior decisions.
+  - When you believe an upstream decision should be changed or extended, for example because a better alternative exists or the current direction deviates from common conventions or standard practices.
+  - Feel free to ask follow-up questions or consult the user as many times as needed.
 - You may ask the user to perform work. In particular, delegate operations that are faster or more reliable for the user to handle, such as GUI operations. If blocked by missing permissions or unavailable software, do not force a workaround; ask the user to perform the necessary operation or installation.
 
 ## CLI
