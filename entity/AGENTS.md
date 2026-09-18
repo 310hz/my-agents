@@ -31,7 +31,7 @@
 - Treat repositories whose GitHub remote belongs to `310hz` as user-owned; inspect the remote if ownership is unclear.
 - For other repositories, do not apply the Git or documentation workflow below unless explicitly instructed.
 - Use the dedicated `git agent commit` alias for agent-authored commits.
-- Follow the Conventional Commits specification for commit messages, but write the commit message body in Japanese.
+- Follow the Conventional Commits specification for commit messages. Keep the type and optional scope in English, and write the rest of the commit message in Japanese.
 - For user-owned repositories, commit and push after completing a coherent set of changes unless instructed otherwise.
 
 ## Documents
