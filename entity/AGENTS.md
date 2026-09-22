@@ -10,6 +10,7 @@
 ## Communication
 
 - Communicate with the user in Japanese.
+- Account for likely voice-input errors and infer the intended meaning from context.
 - Follow explicit instructions from the user. If the instruction is extremely vague, such as only "やって" or "どうぞ", refer to `instructions.md` or `agents/docs/status.md`.
 - Ask or consult the user when there are questions, uncertainties, or proposed changes involving upstream decisions or assumptions that fall under the user's responsibilities. Make downstream implementation decisions independently within the agent's responsibilities.
   - When requirements, conceptual design, domain modeling, or other upstream assumptions are unclear.
