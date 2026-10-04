@@ -37,39 +37,31 @@
 
 ## Documents
 
-Write project-related information under `agents/docs/`.
-
-The single most important goal of documentation is to keep the project in a state where anyone can join at any time and start working smoothly. It should be possible to begin work even from a rough instruction with omitted context. During ongoing development, work should be able to continue even from an ambiguous instruction such as "move on to the next step."
-
-Future contributors may not have sufficient prerequisite knowledge. Write documentation so that even an engineer without the necessary background knowledge can begin working smoothly.
+The project is worked on by the user and multiple agents. To share project assumptions and the current development state, and to enable smooth handoffs between contributors, record the necessary information under `agents/docs/`. As with Git commits, update the documentation whenever a coherent set of changes is completed. When updating documentation, refer to the `project-documentation` skill.
 
 ### Basic Structure
 
 - `<project-root>/`
   - `AGENTS.md`
     - The first document everyone working on the project should read.
-    - Describe the project overview, background, purpose, and other assumptions that must be understood before starting any work. Also include project-specific rules and constraints, if any.
-    - Keep its update frequency low.
+    - Describe the project overview, background, purpose, and other assumptions that must be understood before starting work. Also include project-specific rules and constraints, if any.
   - `agents/`
     - `docs/`
       - `status.md`
         - The current development state and handoff information. Read after `AGENTS.md`.
-        - Record major completed work, unfinished work, what should be done next, etc.
-        - Keep the current state rather than a history. Remove information that is no longer needed.
-        - Update frequently.
       - `index.md`
         - The documentation index and router. Read after `status.md`.
-        - Briefly describe where information lives and when each document should be consulted. Its purpose is to direct readers to the information they need.
+        - Its purpose is to direct readers to the information they need.
       - `requirements/*.md`
-        - Describe what must be satisfied.
+        - Describe the requirements that must be satisfied.
       - `spec/*.md`
-        - Product specifications. Describe how the current product behaves, and also serve as user-facing reference documentation.
+        - Product specifications. Describe how the current product behaves and also serve as user-facing reference documentation.
       - `concepts/*.md`
         - Conceptual design. Domain model.
       - `todo/*.md`
-        - Collect deferred tasks. Record items that are too detailed to include as future plans in `status.md`, or low-priority items whose implementation timing is undecided.
+        - Collect deferred tasks.
     - `refs/`
-      - User-provided images, papers, and other reference material intended for agents.
+      - User-provided images, papers, and other reference materials intended for agents.
 
 The structure above is only an example. Except for the required files listed below, the file structure may be organized freely.
 
@@ -81,11 +73,3 @@ Everyone working on the project must read the following files at the start of ea
 2. `AGENTS.md`
 3. `agents/docs/status.md`
 4. `agents/docs/index.md`
-
-Keep these concise, since they are expected to remain in context. Also keep this reading order in mind and organize information in an order that is easy for the reader to understand. Do not introduce undefined information without explanation. Since this document is shared with everyone working on the project, there is no need to duplicate the same content in each project's documentation.
-
-### Documentation Rules
-
-- Do not document information that is easy to infer from filenames or source code, such as the programming language or framework.
-- Documentation is not a history archive. Clean up or remove outdated status information, completed temporary notes, and anything else that no longer provides value to future engineers. Prefer making necessary information quick to find over preserving as much information as possible. At the same time, do not over-prune assumptions, constraints, or design knowledge that may matter in future work.
-- After updating documentation, verify again whether an engineer without the necessary prerequisite knowledge could read it and begin working smoothly. If not, rewrite it. If so, the work is complete.
