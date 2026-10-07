@@ -4,5 +4,5 @@ SKILLSやAGENTS.mdなど、私がコーディングエージェントを利用�
 
 ## 設定方法
 
-- AGENTS.md: ここにリンク貼るだけ
-- skills: `npx skills add ./skills` で追加
+- AGENTS.md: `entity/AGENTS.md` にリンクを貼る
+- skills: `just install`
