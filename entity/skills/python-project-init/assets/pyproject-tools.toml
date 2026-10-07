@@ -7,6 +7,9 @@ select = [
     "E", "W", "F", "I", "B", "UP", "PTH", "ERA001", "TID251", "D209", "D213",
 ]
 
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
 [tool.ruff.lint.pycodestyle]
 max-doc-length = 72
 

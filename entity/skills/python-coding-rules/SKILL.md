@@ -16,6 +16,9 @@ description: Rules and best practices for Python coding. Always refer to this wh
     - This makes it easier to read when multiple related variables are listed. Example: dpath_dataset, dpath_output, fpath_config
 - Use `typer` for managing command-line arguments. In doing so, enable the help display with `-h`.
 - When writing long strings, use `()` effectively to fit within the line length limit.
+- Write docstrings in Google style. All sections (`Args`, `Returns`, `Raises`, `Examples`, and so on) are optional.
+    - For a library to be published, give every function and method that users may call a full docstring with all applicable sections, and full type hints.
+    - Otherwise, apply the same standard as comments: write only what a reader would need. A summary alone or an `Args` section alone is fine.
 - Style rules enforced by Ruff (line length, docstring layout, `os.path` and `glob` bans, `from __future__ import annotations` ban) are not repeated here. Run `just lint` after editing. New projects are set up with the `python-project-init` skill.
 
 ## Example

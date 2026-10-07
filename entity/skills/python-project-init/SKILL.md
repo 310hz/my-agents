@@ -15,6 +15,10 @@ Set up a new Python project so that style rules are enforced by tools rather tha
 4. Copy `assets/justfile` to the project root. If a `justfile` already exists, add only the `lint` recipe.
 5. Run `just lint` and confirm it passes.
 
+## Additional setup for libraries to be published
+
+A published library needs full docstrings on its public API. Add `"D1"` (missing docstrings on public functions, classes, and modules) and `"D417"` (undocumented arguments) to `select` in `[tool.ruff.lint]`. Projects that will not be published do not need them.
+
 ## Related skills
 
 - Follow the `python-coding-rules` skill when writing code. It covers only the rules that Ruff cannot enforce.
