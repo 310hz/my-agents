@@ -15,18 +15,29 @@ description: Rules and best practices for Python coding. Always refer to this wh
 - Variable names should be structured as `abstract_specific`.
     - This makes it easier to read when multiple related variables are listed. Example: dpath_dataset, dpath_output, fpath_config
 - Use `typer` for managing command-line arguments. In doing so, enable the help display with `-h`.
+- Keep lines to 79 characters or fewer, and comments to 72 characters or fewer.
+- When writing long strings, use `()` effectively to fit within 79 characters.
+- For triple-quoted strings (docstrings), put the opening and closing `"""` on their own lines. A docstring that fits on one line may be written as `"""Summary."""`.
 
-```
+## Example
+
+```python
+from pathlib import Path
+
+import typer
+
 CONTEXT_SETTINGS = dict(help_option_names=["-h", "--help"])
 app = typer.Typer(add_completion=False, context_settings=CONTEXT_SETTINGS)
-```
 
-- Keep lines to 79 characters or fewer, and comments to 72 characters or fewer.
-- When writing long strings, use `()` effectively to fit within 79 characters, as shown below:
 
-```
+def load_config(fpath_config: Path) -> str:
+    """Read the config file."""
+    return fpath_config.read_text()
+
+
 @app.command()
 def main(
+    dpath_dataset: Path = typer.Option(..., "--dataset", "-d"),
     api_key: str = typer.Option(
         None,
         "--api-key", "-k",
@@ -36,4 +47,11 @@ def main(
         ),
     ),
 ):
+    """
+    Summary.
+
+    Details.
+    """
+    fpath_config = dpath_dataset / "config.yaml"
+    config = load_config(fpath_config)
 ```
