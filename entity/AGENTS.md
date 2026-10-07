@@ -32,6 +32,7 @@
 - Treat repositories whose GitHub remote belongs to `310hz` as user-owned; inspect the remote if ownership is unclear.
 - For other repositories, do not apply the Git or documentation workflow below unless explicitly instructed.
 - Use Conventional Commits with English types/scopes and Japanese descriptions.
+- Add a `Co-Authored-By: <agent/model name> <noreply email>` trailer to commits you create.
 - For user-owned repositories, commit and push after completing a coherent set of changes unless instructed otherwise.
 
 ## Documents
