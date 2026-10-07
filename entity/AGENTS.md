@@ -19,13 +19,14 @@
   - Feel free to ask follow-up questions or consult the user as many times as needed.
 - You may ask the user to perform work. In particular, delegate operations that are faster or more reliable for the user to handle, such as GUI operations. If blocked by missing permissions or unavailable software, do not force a workaround; ask the user to perform the necessary operation or installation.
 
-## CLI
+## Engineering
 
 - Use `rm` for files that are clearly safe to delete. If unsure, move them to `<project-root>/.trash/`.
 - Do not place temporary files, caches, or intermediate artifacts in locations that are inconvenient for the user to access, such as `/tmp`. Keep them under the project root and avoid committing them accidentally.
 - Run Python through `uv`.
 - Use `just` as the task runner.
 - Treat `.env` as user-managed: do not open, display, search, edit, or expose its values; reading it indirectly through existing project commands that do not print values is allowed, and use `.env.example` to inspect the configuration schema.
+- Write comments only for why (intent, constraints, pitfalls, rejected alternatives). Do not write comments that restate what the code does or boilerplate file-header comments, except a required license header. When changing code, update or delete the related comments in the same change.
 
 ## Git
 
