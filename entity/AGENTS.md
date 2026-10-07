@@ -26,7 +26,7 @@
 - Run Python through `uv`.
 - Use `just` as the task runner.
 - Treat `.env` as user-managed: do not open, display, search, edit, or expose its values; reading it indirectly through existing project commands that do not print values is allowed, and use `.env.example` to inspect the configuration schema.
-- Write comments only for why (intent, constraints, pitfalls, rejected alternatives). Do not write comments that restate what the code does or boilerplate file-header comments, except a required license header. When changing code, update or delete the related comments in the same change.
+- Write comments only for why (intent, constraints, pitfalls, rejected alternatives), and only when a reader would stop and wonder "why?" without it. Do not comment a why that is obvious with a little thought. Do not write comments that restate what the code does or boilerplate file-header comments, except a required license header. When changing code, update or delete the related comments in the same change.
 
 ## Git
 
