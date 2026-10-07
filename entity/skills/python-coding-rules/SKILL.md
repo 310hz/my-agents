@@ -11,6 +11,7 @@ description: Rules and best practices for Python coding. Always refer to this wh
     - File name: fname
     - Directory path: dpath
     - Directory name: dname
+    - Path that is neither clearly a file nor a directory, or may be either: path
 - Variable names should be structured as `abstract_specific`.
     - This makes it easier to read when multiple related variables are listed. Example: dpath_dataset, dpath_output, fpath_config
 - Use `typer` for managing command-line arguments. In doing so, enable the help display with `-h`.
