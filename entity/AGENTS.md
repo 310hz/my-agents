@@ -20,7 +20,6 @@
   - Mapping an English technical term to a Sino-Japanese compound: baseline → 「基準線」, background job → 「背景実行」
   - Translating English phrasing literally: cheap / expensive in the sense of computational cost → 「安い」 / 「高い」, take effect → 「効く」
   - Translating a field-specific term into an everyday word: flag → 「旗」, block → 「塊」
-- Do not use business katakana jargon such as 「ソリューション」 or 「シナジー」.
 - Do not use metaphorical verbs; state concretely what changes and how. Forbidden examples: 「〜側に倒す」, 「1つずつ潰す」, 「時間を溶かす」, 「地味に効く」, 「例外を上に逃がす」
 - Do not use vague words. Forbidden examples: 「解像度を上げる」, 「腹落ち」, 「言語化」, 「落とし込む」, 「紐解く」, 「本質的」, 「温度感」
 - Do not give exaggerated names to roles. Forbidden examples: calling a rule a 「契約」, an original text a 「正本」, a check a 「ゲート」, or a list a 「台帳」
